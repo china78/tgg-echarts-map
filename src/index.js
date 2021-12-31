@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 import axios from 'axios';
+import { init } from 'echarts';
 
 // interface Props {
 //   data?: any;
@@ -256,13 +257,21 @@ const TggEchartsMap = (props) => {
     });
   }
 
+  async function init() {
+    const url = `./data/${area}.json`;
+    const res = await import(url);
+    console.log(res);
+    loadMap(area, res.data);
+  }
+
   useEffect(() => {
     // const name = area;
-    const url = `/data/${area}.json`;
-    axios.get(url).then(res => {
-      console.log('---------: ', res);
-      loadMap(area, res.data);
-    })
+    // const url = `/data/${area}.json`;
+    // axios.get(url).then(res => {
+    //   console.log('---------: ', res);
+    //   loadMap(area, res.data);
+    // })
+    init();
   }, [props])
 
   return <div ref={chartRef} style={{ width: '100%', height: '100%' }} />
