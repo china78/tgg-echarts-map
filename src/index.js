@@ -250,7 +250,7 @@ const TggEchartsMap = (props) => {
 
     chart.setOption(option);
 
-    // 点击事件
+    // 点击事件1
     chart.on("click", function (params) {
       /**点击干啥 */
       console.log('点击事件: ', params);
