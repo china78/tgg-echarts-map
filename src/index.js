@@ -1,7 +1,5 @@
-import React, { FC, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-import axios from 'axios';
-import { init } from 'echarts';
 
 // interface Props {
 //   data?: any;

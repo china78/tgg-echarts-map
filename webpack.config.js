@@ -7,6 +7,7 @@ module.exports = {
     filename: "index.js",
     library: 'TggEchartsMap',
     libraryTarget: 'umd',
+    publicPath: '/',
   },
   externals: {
     react: {
