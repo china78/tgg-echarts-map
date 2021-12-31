@@ -1,6 +1,6 @@
 {
   "name": "tgg-echarts-map",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "echarts地图的二次封装,传入省市区名称，即可显示地图",
   "main": "lib/index.js",
   "scripts": {
