@@ -250,7 +250,7 @@ const TggEchartsMap = (props) => {
 
     chart.setOption(option);
 
-    // 点击事件1
+    // 点击事件
     chart.on("click", function (params) {
       /**点击干啥 */
       console.log('点击事件: ', params);
@@ -258,9 +258,9 @@ const TggEchartsMap = (props) => {
   }
 
   async function init() {
-    const url = `./data/${area}.json`;
+    const url = `/data/${area}.json`;
     const res = await import(url);
-    console.log(res);
+    console.log('-YYYYYY-: ', res);
     loadMap(area, res.data);
   }
 
